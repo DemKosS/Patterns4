@@ -1,1 +1,1 @@
-[![Build status](https://ci.[![Build status](https://ci.appveyor.com/api/projects/status/1b3ocnwpcxcd6awb/branch/master?svg=true)](https://ci.appveyor.com/project/DemKosS/patterns4-ldlgq/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/1b3ocnwpcxcd6awb/branch/master?svg=true)](https://ci.appveyor.com/project/DemKosS/patterns4-ldlgq/branch/master)
