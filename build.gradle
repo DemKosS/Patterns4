@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "io.freefair.lombok" version "6.0.0-m2"
+    id 'io.qameta.allure' version "2.9.6"
 }
 
 group 'ru.netology'
@@ -10,16 +11,32 @@ sourceCompatibility = 11
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
+allure {
+    version = '2.16.1'
+    useJUnit5 {
+        version = '2.16.1'
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    testImplementation 'com.codeborne:selenide:5.19.0'
+    testImplementation 'com.codeborne:selenide:6.3.5'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     compileOnly 'org.projectlombok:lombok:1.18.18'
+    testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    // https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-report-builder
+    implementation 'ru.yandex.qatools.allure:allure-report-builder:2.2'
+
+
+
+
 }
 
 test {
